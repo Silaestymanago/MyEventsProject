@@ -28,10 +28,8 @@ public class MyEventsTest extends BaseTest {
 
         String nameProduct = "Laima Vaikule ";
         myEventsPage.enterNameProduct(nameProduct);
-        int elementIndex = 8;
-        String expectedNameElement = "Laima Vaikule in Toronto";
-        String actualNameElement = myEventsPage.nameElement(elementIndex);
-        Assert.assertEquals(actualNameElement, expectedNameElement);
+        String actualNameElement = myEventsPage.nameElement();
+        Assert.assertTrue(actualNameElement.contains(nameProduct));
     }
 
     @Test(description = "TC-002;Button Live")

@@ -14,7 +14,7 @@ public class MyEventsPage {
     private final ElementsCollection COUNT_ELEMENTS_LIVE_AFTER_SCROLL = $$("[class='Live__StyledLive3ItemRoot-sc-7z5lza-1 dYLfxb']");
     private final SelenideElement LIVE_110 = $("[class='Tab__TabItem-sc-1ke6kso-1 jjLlSk']");
     private final ElementsCollection BUTTON_DRAFT = $$("[class='Tab__TabItem-sc-1ke6kso-1 jiWqQK']");
-    private final ElementsCollection ELEMENT_NAME = $$("[class='Typography__Typ-sc-13nd3m6-0 bBgohu']");
+    private final SelenideElement ELEMENT_NAME = $("[class='Typography__Typ-sc-13nd3m6-0 bBgohu']");
     private final ElementsCollection COUNT_ELEMENTS_DRAFT_AFTER_SCROLL = $$("[class='Live__StyledLive3ItemWrapper-sc-7z5lza-2 dphAng']");
     private final ElementsCollection GET_SELECT_ELEMENT = $$("[class='Typography__Typ-sc-13nd3m6-0 bBgohu']");
     private final SelenideElement TITLE_MY_EVENTS = $x("//div[contains(text(),'My Events')]");
@@ -39,8 +39,8 @@ public class MyEventsPage {
     }
 
     @Step("TC-001:Check that the entered word Laima Vaikule open page with elements Laima Vaijule")
-    public String nameElement(int elementIndex) {
-        return ELEMENT_NAME.get(elementIndex-1).getText();
+    public String nameElement() {
+        return ELEMENT_NAME.getText();
     }
 
     @Step("TC-002:Check that the page My Events has button LIVE 110")
